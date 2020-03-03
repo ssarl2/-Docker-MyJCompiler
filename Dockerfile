@@ -14,9 +14,8 @@ RUN source /etc/profile
 RUN echo "/jre/lib/ext/" >> jdkversion
 RUN sed -i ':Loop; N; $!b Loop; s/\n//g' /root/jdkversion
 
-RUN mkdir -p /root/webapps
-ADD ex.sh /root/webapps/ex.sh
-RUN chmod +x /root/webapps/ex.sh
+ADD ex.sh /root/ex.sh
+RUN chmod +x /root/ex.sh
 
 RUN rm -f /root/exp
 RUN mv /root/jdkversion /root/jdkpath
