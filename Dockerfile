@@ -15,7 +15,7 @@ RUN echo "/jre/lib/ext/" >> jdkversion
 RUN sed -i ':Loop; N; $!b Loop; s/\n//g' /root/jdkversion
 
 RUN mkdir -p /root/webapps
-ADD ex.sh /root/webapps/
+ADD ex.sh /root/webapps/ex.sh
 RUN chmod +x /root/webapps/ex.sh
 
 RUN rm -f /root/exp
